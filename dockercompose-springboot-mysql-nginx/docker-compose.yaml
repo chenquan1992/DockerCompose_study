@@ -17,6 +17,7 @@ services:
     MYSQL_DATABASE: test
     MYSQL_ROOT_PASSWORD: root
     MYSQL_ROOT_HOST: '%'
+    CHEN_QUAN: chenquan_test
    ports:
    - "3306:3306"
    restart: always
@@ -28,6 +29,8 @@ services:
     volumes:
       - ./app:/app
       - ~/.m2:/root/.m2
+    environment:
+        CHEN_QUAN: chenquan_test_app_jar
     expose:
       - "8080"
     depends_on:
