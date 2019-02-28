@@ -21,7 +21,22 @@ services:
    ports:
    - "3306:3306"
    restart: always
-    
+   volumes:
+   - ./mysql/db:/var/lib/mysql
+   - ./mysql/conf/my.cnf:/etc/my.cnf
+   - ./mysql/init:/docker-entrypoint-initdb.d/
+
+  redis:
+   container_name: v-redis
+   image: redis
+   command: redis-server /usr/local/etc/redis/redis.conf
+   ports:
+   - "6379:6379"
+   restart: always
+   volumes:
+   - ./redis/db:/data
+   - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+
   app:
     restart: always
     build: ./app
@@ -36,4 +51,5 @@ services:
     depends_on:
       - nginx
       - mysql
+      - redis
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
