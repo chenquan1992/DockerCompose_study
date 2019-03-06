@@ -1,0 +1,6 @@
+version: '3'
+services:
+  spring:
+    build: .     #这里不能写备注，只是需要，这个 “ . ” 指的就是当前目录下的dockefile文件，去构建它
+    ports:
+     - "80:8080"

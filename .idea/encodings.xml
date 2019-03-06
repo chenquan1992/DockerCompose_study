@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/Dockerfile1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/dockercompose-springboot-mysql-nginx-1.0.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/ptshop/ptShopBlack/Dockerfile" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/ptshop/ptShopBlack/ptshopblack-8084.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/ptshop/ptShopFront/Dockerfile" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockercompose-springboot-mysql-nginx/ptshop/ptShopFront/ptshop-8082.jar" charset="UTF-8" />
   </component>
 </project>

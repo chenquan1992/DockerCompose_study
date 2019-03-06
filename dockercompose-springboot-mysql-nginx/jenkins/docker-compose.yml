@@ -1,0 +1,31 @@
+version: '3'
+services:
+  jenkins:
+    image: 'stephenreed/jenkins-java8-maven-git'
+    container_name: jenkins
+    restart: always
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: '47.106.212.236'
+    environment:
+     GITLAB_OMNIBUS_CONFIG: |
+       external_url 'https://47.106.212.236'
+    ports:
+     - '80:80'
+     - '443:443'
+     - '8081:22'
+    volumes:
+     - '/srv/gitlab/config:/etc/gitlab'
+     - '/srv/gitlab/logs:/var/log/gitlab'
+     - '/srv/gitlab/data:/var/opt/gitlab'
+
+
+
+
